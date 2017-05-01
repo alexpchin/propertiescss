@@ -1,10 +1,36 @@
-# PropertiesCSS
+# :house: [PropertiesCSS](http://www.propertiescss.com)
 
-A CSS framework that uses one class per property. Tag your HTML now!
+An open-source CSS Framework that aims to create a shorthand syntax for inline-CSS and remove the need for creating your own stylesheets.
 
-Each class has a shorthand that can be found in the `dictionary.json` file.
+## Wtf?!
 
-The files are:
+Inspired by Adam Morse' work on tachyons and the concept that managing the cascade is actually more hassle than it's worth.
+
+## The anatomy of a PropertiesCSS class
+
+```html
+<div class="p-1">
+</div>
+```
+
+- `p`: The CSS property
+- `-1`: The `rem` value
+
+## Naming convention & goals
+
+It makes sense that:
+
+- Only classes are used in the framework, no ids
+- A fixed & legible scale (in rem)
+- Easy to reference config JSON file (`properties.json`)
+- Most frequently used properties are the shortest classes
+- Semantic classes where possible, e.g. `"background": "bg"`
+
+
+
+
+
+
 
 ```
 - azimuth
@@ -108,3 +134,22 @@ The files are:
 - width
 - word-spacing
 - z-index
+```
+
+## Credits
+
+Properties is a project by @alexchin. Its principles and techniques are very influenced by the following projects, organisations and individuals:
+
+- [tachyons](http://tachyons.io/)
+- [Atomic CSS](https://acss.io/)
+- [JSS](http://cssinjs.org)
+
+- [Basscss](http://basscss.com/)
+- [Skeleton](http://getskeleton.com/)
+- [Bulma](http://bulma.io/)
+- [Pure.css](https://purecss.io/)
+- [Milligram](https://milligram.github.io/)
+- [concise](http://concisecss.com/)
+- [TURRETCSS](http://turretcss.com/)
+- [Amazium](https://www.amazium.co.uk/)
+- [Cardinal](http://cardinalcss.com/)

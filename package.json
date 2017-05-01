@@ -1,0 +1,26 @@
+{
+  "name": "propertiescss",
+  "version": "0.0.1",
+  "description": "A CSS framework to shorten inline-CSS",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexpchin/propertiescss.git"
+  },
+  "keywords": [
+    "css",
+    "css-frameworks",
+    "tachyons",
+    "bassCSS",
+    "post-css"
+  ],
+  "author": "alexpchin <alex@alexchin.co.uk>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexpchin/propertiescss/issues"
+  },
+  "homepage": "https://github.com/alexpchin/propertiescss#readme"
+}
