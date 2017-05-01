@@ -1,20 +1,18 @@
 const fs = require('fs');
-const properties = require('./src/properties.json');
-const max = 64;
+const config = require('./src/properties.json');
+const max = 10;
 const step = 0.25;
 const scale = Array(max).fill().map((_,i) => (i*step).toString());
-const shortPropertiesAsClasses = Object.keys(properties);
+const shorthands = Object.keys(config);
 
-const output = shortPropertiesAsClasses.map(property => {
-  const title = `/* ${property} classes */\n\n`;
-
-  const classes = scale.map(step => {
-    const selector = `.${properties[property]}--${step.replace('.', '-')}`;
-    return `${selector} {\n\t${property}: ${step}rem;\n}`;
+const contents = shorthands.map(property => {
+  const propertiesArray = config[property];
+  return scale.map(step => {
+    return `.${property}${step.replace('.', '-')} {\n${propertiesArray.map(cssProperty => {
+      return `\t${cssProperty}: ${step}rem;`;
+    }).join('\n')}\n}`;
   }).join('\n\n');
-
-  return `${title}${classes}`;
-});
+}).join('\n\n');
 
 const dist = './dist';
 
@@ -22,7 +20,7 @@ if (!fs.existsSync(dist)) {
   fs.mkdirSync(dist);
 }
 
-fs.writeFile('./dist/properties.css', output, err => {
+fs.writeFile('./dist/properties.css', contents, err => {
   if (err) return console.log(err);
-  console.log(`Properties CSS was built!`);
+  return console.log(`Properties CSS was built!`);
 });

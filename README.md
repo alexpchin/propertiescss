@@ -20,17 +20,34 @@ Inspired by Adam Morse' work on tachyons and the concept that managing the casca
 
 It makes sense that:
 
-- Only classes are used in the framework, no ids
+- Only classes are used in the framework (no ids)
 - A fixed & legible scale (in rem)
+  - Should not include strange random values, e.g. `padding: 23.4px`
+  - Minimum being 0.25rem
 - Easy to reference config JSON file (`properties.json`)
+  - Used as documentation
 - Most frequently used properties are the shortest classes
 - Semantic classes where possible, e.g. `"background": "bg"`
 
+## A universal pattern for creating CSS classes
+
+```css
+type.selector[attribute]::pseudo {
+  property: value1 value2 value3 value4;
+}
+```
+
+We're going to ignore:
+
+- Grouping selectors (This will be done for us)
+- Descendant selectors
+- Child selectors
+- Adjacent sibling selectors
 
 
+## To Do
 
-
-
+- No aural CSS
 
 ```
 - azimuth

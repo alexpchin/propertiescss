@@ -1,3 +1,9 @@
 {
-  "padding": "p"
+  "p": ["padding"],
+  "pt": ["padding-top"],
+  "pb": ["padding-bottom"],
+  "pl": ["padding-left"],
+  "pr": ["padding-right"],
+  "pv": ["padding-top", "padding-bottom"],
+  "ph": ["padding-left", "padding-right"]
 }
